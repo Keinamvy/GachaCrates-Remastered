@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.gmail.cparse2021</groupId>
     <artifactId>gacha-crates</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.1-Remastered</version>
 
     <repositories>
         <repository>
@@ -18,7 +18,7 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.18.1-R0.1-SNAPSHOT</version>
+            <version>1.20.4-R0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
@@ -34,14 +34,6 @@
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
-                <includes>
-                    <include>config.yml</include>
-                    <include>crates.yml</include>
-                    <include>data.yml</include>
-                    <include>lang.yml</include>
-                    <include>menus.yml</include>
-                    <include>plugin.yml</include>
-                </includes>
             </resource>
         </resources>
         <plugins>
