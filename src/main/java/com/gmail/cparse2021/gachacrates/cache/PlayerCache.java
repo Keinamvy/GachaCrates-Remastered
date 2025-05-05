@@ -2,8 +2,8 @@ package com.gmail.cparse2021.gachacrates.cache;
 
 import com.gmail.cparse2021.gachacrates.GachaCrates;
 import com.gmail.cparse2021.gachacrates.file.CustomFile;
-import com.gmail.cparse2021.gachacrates.struct.crate.Crate;
 import com.gmail.cparse2021.gachacrates.struct.GachaPlayer;
+import com.gmail.cparse2021.gachacrates.struct.crate.Crate;
 import com.gmail.cparse2021.gachacrates.struct.reward.RewardTier;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;

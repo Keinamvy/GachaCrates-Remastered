@@ -13,8 +13,8 @@ import java.util.logging.Level;
 import java.util.stream.Collectors;
 
 public class RewardTier {
-    private HashMap<Reward, Double> rewardProbabilityMap = new HashMap<>();
     private final String name;
+    private HashMap<Reward, Double> rewardProbabilityMap = new HashMap<>();
     private int pityLimit = 0;
     private boolean pityEnabled = false;
     private ItemStack displayItem = new ItemBuilder(Material.WHITE_STAINED_GLASS_PANE).setDisplayName("&7Reward Tier").build();

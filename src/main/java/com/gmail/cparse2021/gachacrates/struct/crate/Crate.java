@@ -2,8 +2,8 @@ package com.gmail.cparse2021.gachacrates.struct.crate;
 
 import com.gmail.cparse2021.gachacrates.GachaCrates;
 import com.gmail.cparse2021.gachacrates.lang.Lang;
-import com.gmail.cparse2021.gachacrates.menu.menus.CrateOpenMenu;
 import com.gmail.cparse2021.gachacrates.menu.Menu;
+import com.gmail.cparse2021.gachacrates.menu.menus.CrateOpenMenu;
 import com.gmail.cparse2021.gachacrates.struct.GachaPlayer;
 import com.gmail.cparse2021.gachacrates.struct.reward.Reward;
 import com.gmail.cparse2021.gachacrates.struct.reward.RewardTier;
@@ -19,10 +19,10 @@ import java.util.logging.Level;
 public class Crate {
     private final LinkedHashMap<RewardTier, Double> rewardProbabilityMap = new LinkedHashMap<>();
     private final String name;
-    private UUID uuid;
-    private AnimationType animationType;
     private final Set<Location> crateLocations = new HashSet<>();
     private final HashMap<Location, Boolean> inUse = new HashMap<>();
+    private UUID uuid;
+    private AnimationType animationType;
 
     public Crate(String name) {
         this.name = name;
@@ -267,10 +267,10 @@ public class Crate {
                 }.runTaskTimer(plugin, 0, 7);
 
                 new BukkitRunnable() {
-                    int counter = 1;
                     final Location cloudLoc = particleStartLoc.clone().add(0, 1.5, 0);
                     final List<Location> particleLocations = MathUtil.circle(cloudLoc, 0.5, false);
                     final Particle.DustOptions dustOptions = new Particle.DustOptions(Color.SILVER, 1);
+                    int counter = 1;
 
                     @Override
                     public void run() {

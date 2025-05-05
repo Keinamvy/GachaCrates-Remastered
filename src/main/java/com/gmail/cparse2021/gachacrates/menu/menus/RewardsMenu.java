@@ -4,9 +4,9 @@ import com.gmail.cparse2021.gachacrates.GachaCrates;
 import com.gmail.cparse2021.gachacrates.lang.Lang;
 import com.gmail.cparse2021.gachacrates.menu.Menu;
 import com.gmail.cparse2021.gachacrates.menu.MenuManager;
+import com.gmail.cparse2021.gachacrates.struct.GachaPlayer;
 import com.gmail.cparse2021.gachacrates.struct.crate.Crate;
 import com.gmail.cparse2021.gachacrates.struct.crate.CrateSession;
-import com.gmail.cparse2021.gachacrates.struct.GachaPlayer;
 import com.gmail.cparse2021.gachacrates.struct.reward.Reward;
 import com.gmail.cparse2021.gachacrates.struct.reward.RewardTier;
 import com.gmail.cparse2021.gachacrates.util.ItemBuilder;
@@ -27,6 +27,7 @@ import java.util.*;
 public class RewardsMenu extends Menu {
     private final GachaCrates plugin;
     private final HashMap<UUID, ItemStack> offhandSnapshotMap = new HashMap<>();
+    private final HashMap<UUID, Integer> pageMap = new HashMap<>();
     private String title = "Rewards Menu";
     private ItemStack backgroundItem = new ItemBuilder(Material.WHITE_STAINED_GLASS_PANE).setDisplayName("&7").build();
     private ItemStack borderItem = new ItemBuilder(Material.GRAY_STAINED_GLASS_PANE).setDisplayName("&7").build();
@@ -35,7 +36,6 @@ public class RewardsMenu extends Menu {
     private ItemStack backItem = new ItemBuilder(Material.RED_STAINED_GLASS_PANE).setDisplayName("&cBack").build();
     private ItemStack pityItem = new ItemBuilder(Material.NETHER_STAR).setDisplayName("&ePity Tracker").build();
     private ItemStack rateItem = new ItemBuilder(Material.DARK_OAK_SIGN).setDisplayName("&eReward Tier Rates").build();
-    private final HashMap<UUID, Integer> pageMap = new HashMap<>();
 
     public RewardsMenu(GachaCrates plugin) {
         super("rewards");

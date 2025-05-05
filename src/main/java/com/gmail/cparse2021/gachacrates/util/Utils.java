@@ -76,9 +76,9 @@ public class Utils {
      * Format a string by translating unicode characters and colors
      * Also supports hex color codes in the format of &#AA00AA
      *
-     * @author DMan16 on SpigotMC
      * @param str String to format
      * @return Formatted string
+     * @author DMan16 on SpigotMC
      */
     public static String formatString(String str) {
         Pattern unicode = Pattern.compile("\\\\u\\+[a-fA-F0-9]{4}");
@@ -89,19 +89,19 @@ public class Utils {
         Matcher match = unicode.matcher(str);
 
         while (match.find()) {
-            String code = str.substring(match.start(),match.end());
-            str = str.replace(code,Character.toString((char) Integer.parseInt(code.replace("\\u+",""),16)));
+            String code = str.substring(match.start(), match.end());
+            str = str.replace(code, Character.toString((char) Integer.parseInt(code.replace("\\u+", ""), 16)));
             match = unicode.matcher(str);
         }
         Pattern pattern = Pattern.compile("&#[a-fA-F0-9]{6}");
         match = pattern.matcher(str);
 
         while (match.find()) {
-            String color = str.substring(match.start(),match.end());
-            str = str.replace(color, ChatColor.of(color.replace("&","")) + "");
+            String color = str.substring(match.start(), match.end());
+            str = str.replace(color, ChatColor.of(color.replace("&", "")) + "");
             match = pattern.matcher(str);
         }
 
-        return ChatColor.translateAlternateColorCodes('&',str);
+        return ChatColor.translateAlternateColorCodes('&', str);
     }
 }

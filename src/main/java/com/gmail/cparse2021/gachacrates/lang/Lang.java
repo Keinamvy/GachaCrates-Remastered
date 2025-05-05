@@ -41,10 +41,10 @@ public enum Lang {
 
     PREFIX("prefix", "&2Gacha Crates &8\u00BB &f", LangType.NORMAL);
 
+    private static FileConfiguration fileConfiguration;
     private final String path;
     private final String def;
     private final LangType langType;
-    private static FileConfiguration fileConfiguration;
 
     Lang(String path, LangType langType) {
         this.path = path;
@@ -56,6 +56,10 @@ public enum Lang {
         this.path = path;
         this.def = def;
         this.langType = langType;
+    }
+
+    public static void setFileConfiguration(FileConfiguration fileConfiguration) {
+        Lang.fileConfiguration = fileConfiguration;
     }
 
     public void send(CommandSender sender) {
@@ -93,10 +97,6 @@ public enum Lang {
                 messages.forEach(sender::sendMessage);
             }
         }
-    }
-
-    public static void setFileConfiguration(FileConfiguration fileConfiguration) {
-        Lang.fileConfiguration = fileConfiguration;
     }
 
     public List<String> toStringList() {
